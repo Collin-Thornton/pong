@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<canvas id="canvas" width="900" height="725" style="border:10px solid"></canvas>
+<canvas id="canvas" width="900" height="500" style="border:10px solid"></canvas>
 
 <script>
 	var canvas = document.getElementById("canvas");
@@ -85,7 +85,7 @@
 
 	function drawPaddleOne() {
 		ctx.beginPath();
-		ctx.rect(canvas.height-paddleWidth-paddleDistanceFromEdge, paddleOneY, paddleWidth, paddleHeight);
+		ctx.rect(canvas.width-paddleWidth-paddleDistanceFromEdge, paddleOneY, paddleWidth, paddleHeight);
 		ctx.fillStyle = "#0095DD";
 		ctx.fill();
 		ctx.closePath();
