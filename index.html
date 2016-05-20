@@ -10,8 +10,18 @@
 	</style>
 </head>
 <body>
+	<script>
+		function resizeCanvas() {
+			var canvas = document.getElementById("game");
+			canvas.width = window.innerWidth - 200;
+			canvas.height = window.innerHeight - 200;
+		}
+	</script>
 
 <canvas id="game" width="100%" height="100%" style="border:10px solid"></canvas>
+<body onload = "resizeCanvas();">
+	<canvas id="game"> </canvas>
+</body>
 
 <script>
 	var canvas = document.getElementById("game");
