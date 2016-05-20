@@ -6,8 +6,8 @@
 	<title>Game for Humanities</title>
 	<style>
 		canvas {
-			width: 90%;
-			height: 90%;
+			max-width: 90%;
+			max-height: 90%;
 			margin: auto;
 			padding: 10px 10px 10px 10px;
 			display: block;
@@ -34,7 +34,7 @@
 	var paddleHeight = 150;
 	var paddleWidth = 30;
 	var paddleDistanceFromEdge = 20;
-	var paddleOneY = (window.innerHeight-paddleHeight)/2;
+	var paddleOneY = (canvas.height-paddleHeight)/2;
 	var paddleTwoY = (canvas.height-paddleHeight)/2;
 	var paddleOneLeftSide = canvas.width - paddleDistanceFromEdge - paddleWidth - ballRadius;
 	var paddleOneRightSide = canvas.width - paddleDistanceFromEdge - ballRadius;
@@ -85,7 +85,7 @@
 
 	function drawPaddleOne() {
 		ctx.beginPath();
-		ctx.rect(window.innerWidth-paddleWidth-paddleDistanceFromEdge, paddleOneY, paddleWidth, paddleHeight);
+		ctx.rect(canvas.height-paddleWidth-paddleDistanceFromEdge, paddleOneY, paddleWidth, paddleHeight);
 		ctx.fillStyle = "#0095DD";
 		ctx.fill();
 		ctx.closePath();
