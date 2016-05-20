@@ -10,8 +10,13 @@
 	</style>
 </head>
 <body>
+	<script>
+		var canvasHeight = window.innerHeight();
+		var canvasWidth = window.innerWidth();
+		
+	</script>
 
-<canvas id="game" width="950" height="725" style="border:10px solid"></canvas>
+<canvas id="game" width="canvasWidth" height="canvasHeight" style="border:10px solid"></canvas>
 
 <script>
 	var canvas = document.getElementById("game");
