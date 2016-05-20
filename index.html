@@ -23,8 +23,6 @@
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 
-	var canvas.width = window.innerWidth;
-	var canvas.height = window.innerHeight;
 	var x = canvas.width/2;
 	var y = canvas.height/2;
 	var dx = 3;
@@ -36,7 +34,7 @@
 	var paddleHeight = 150;
 	var paddleWidth = 30;
 	var paddleDistanceFromEdge = 20;
-	var paddleOneY = (canvas.height-paddleHeight)/2;
+	var paddleOneY = (window.innerHeight-paddleHeight)/2;
 	var paddleTwoY = (canvas.height-paddleHeight)/2;
 	var paddleOneLeftSide = canvas.width - paddleDistanceFromEdge - paddleWidth - ballRadius;
 	var paddleOneRightSide = canvas.width - paddleDistanceFromEdge - ballRadius;
@@ -87,7 +85,7 @@
 
 	function drawPaddleOne() {
 		ctx.beginPath();
-		ctx.rect(canvas.width-paddleWidth-paddleDistanceFromEdge, paddleOneY, paddleWidth, paddleHeight);
+		ctx.rect(window.innerWidth-paddleWidth-paddleDistanceFromEdge, paddleOneY, paddleWidth, paddleHeight);
 		ctx.fillStyle = "#0095DD";
 		ctx.fill();
 		ctx.closePath();
