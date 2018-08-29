@@ -120,40 +120,6 @@
 		ctx.fillStyle = "#0095DD";
 		ctx.fillText(playerTwoScore, canvas.width/2 - 150, canvas.height * .25)
 	}
-	
-	function drawSinglePlayerButton() {
-		ctx.beginPath();
-		ctx.rect(canvas.width/2-60, canvas.height*1/4, 120, 30);
-		ctx.fillStyle = "#0095DD";
-		ctx.fill();
-		ctx.closePath();
-		ctx.font = "20px Arial";
-		ctx.fillStyle = "#000000";
-		ctx.fillText("Single Player", canvas.width/2, canvas.height * 1/4);
-	}
-	
-	function drawMultiLocalButton() {
-		ctx.beginPath();
-		ctx.rect(canvas.width/2-60, canvas.height*2/4, 120, 30);
-		ctx.fillStyle = "#0095DD";
-		ctx.fill();
-		ctx.closePath();
-	}
-	
-	function drawMultiOnlineButton() {
-		ctx.beginPath();
-		ctx.rect(canvas.width/2-60, canvas.height*3/4, 120, 30);
-		ctx.fillStyle = "#0095DD";
-		ctx.fill();
-		ctx.closePath();
-	}
-	
-	function mainMenu() {
-		cctx.clearRect(0, 0, canvas.width, canvas.height);
-		drawSinglePlayerButton();
-		drawMultiLocalButton();
-		drawMultiOnlineButton();
-	}
 
 	function twoPlayer() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -283,11 +249,6 @@
 
 		x += dx;
 		y += dy;
-
-	}
-
-	setInterval(twoPlayer, 1);
-
 
 </script>
 </body>
