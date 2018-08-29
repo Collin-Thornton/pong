@@ -47,6 +47,8 @@
 
 	var playerOneScore = 0;
 	var playerTwoScore = 0;
+	
+	var begin = true;
 
 	document.addEventListener("keydown", keyDownHandler, false);
 	document.addEventListener("keyup", keyUpHandler, false);
@@ -246,7 +248,7 @@
 		x += dx;
 		y += dy;
 	}
-	setInterval(main(), 20);
+	setInterval(main(), 1);
 	
 </script>
 </body>
