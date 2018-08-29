@@ -119,7 +119,7 @@
 		ctx.fillText(playerTwoScore, canvas.width/2 - 150, canvas.height * .25)
 	}
 
-	function main() {
+	setInterval(function main() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		drawBall();
 		drawPaddleOne();
@@ -247,8 +247,7 @@
 
 		x += dx;
 		y += dy;
-	}
-	setInterval(main(), 20);
+	}, 20);
 	
 </script>
 </body>
