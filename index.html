@@ -27,6 +27,8 @@
 	var dx = 15;
 	var dy = -2;
 	var randomList = [2, -2, 1, 0, -1];
+	var counter = 0;
+	var speedFactor = 1;
 
 	var ballRadius = 15;
 
@@ -120,6 +122,13 @@
 	}
 
 	setInterval(function main() {
+		
+		counter++;
+		if(counter > 151) {
+			dx += 1;
+			counter = 0;
+		}
+		
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		drawBall();
 		drawPaddleOne();
