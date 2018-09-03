@@ -24,7 +24,7 @@
 	
 	var x = canvas.width/2;
 	var y = canvas.height/2;
-	var dx = 7.5;
+	var dx = 15;
 	var dy = -2;
 	var randomList = [2, -2, 1, 0, -1];
 
@@ -128,16 +128,16 @@
 		drawPlayerTwoScore();
 
 		if(upPressed && paddleOneY > 0) {
-			paddleOneY -= 5;
+			paddleOneY -= 10;
 		}
 		if(downPressed && paddleOneY < canvas.height-paddleHeight) {
-			paddleOneY += 5;
+			paddleOneY += 10;
 		}
 		if(wPressed && paddleTwoY > 0) {
-			paddleTwoY -= 5;
+			paddleTwoY -= 10;
 		}
 		if (sPressed && paddleTwoY < canvas.height-paddleHeight) {
-			paddleTwoY += 5;
+			paddleTwoY += 10;
 		}
 
 		if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
