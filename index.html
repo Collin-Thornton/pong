@@ -125,7 +125,7 @@
 		
 		counter++;
 		if(counter > 151) {
-			speedFactor++;
+			speedFactor = speedFactor + .1;
 			dx = dx * speedFactor;
 			counter = 0;
 			console.log(dx + ',' + speedFactor);
